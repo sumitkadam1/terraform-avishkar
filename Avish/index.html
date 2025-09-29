@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terraform DevOps Tool</title>
+  <style>
+   /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #f9fbfc, #eef3f7);
+  color: #333;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+header {
+  background: linear-gradient(90deg, #0a3b66, #145c9e);
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .header-logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+header p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #dbe6f1;
+  margin-top: 4px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 30px auto 60px;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.box {
+  background-color: white;
+  padding: 28px 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+}
+
+.box h2 {
+  font-size: 28px;
+  color: #0a3b66;
+  margin-bottom: 16px;
+  font-weight: 700;
+  border-bottom: 2px solid #e1e7ef;
+  padding-bottom: 6px;
+}
+
+.box ul {
+  padding-left: 18px;
+  list-style: none;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.box ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 2px;
+}
+
+.box code {
+  background: #f9fafc;
+  padding: 12px 14px;
+  border-left: 5px solid #0a3b66;
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: #333;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  margin-bottom: 15px;
+}
+
+.workflow {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.workflow a {
+  background: #0a3b66;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(10, 59, 102, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.workflow a:hover {
+  background-color: #07406a;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(10, 59, 102, 0.9);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #0a3b66, #145c9e);
+  color: white;
+  text-align: center;
+  padding: 22px 15px;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffd633;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  header .header-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .box {
+    padding: 22px;
+  }
+  .workflow {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .workflow a {
+    width: 100%;
+    text-align: center;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <img src="Terra.png" alt="Terraform Logo" class="header-logo" />
+      <div>
+        <h1>DEVOPS TOOL: TERRAFORM</h1>
+        <p>Infrastructure as Code (IaC)</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- What is Terraform -->
+    <section class="box" id="what">
+      <h2>What is Terraform?</h2>
+        <ul>
+          <li>📦 Open source Infrastructure as Code (IaC) tool by HashiCorp</li>
+          <li>📝 Defines and provisions infrastructure using declarative config files</li>
+          <li>☁️ Supports AWS, Azure, Google Cloud & many providers</li>
+          <li>🔄 Manages entire infrastructure lifecycle efficiently</li>
+          <li>⚡ Enables automation & version control for deployments</li>
+        </ul>
+    </section>
+
+    <!-- How it works -->
+    <section class="box" id="how">
+      <h2>How It Works</h2>
+      <code>
+resource "aws_instance" "Avishkar" {<br />
+&nbsp;&nbsp;ami           = "ami-08982f1c5bf93d976"<br />
+&nbsp;&nbsp;instance_type = "t3.micro"<br />
+&nbsp;&nbsp;key_name      = "test"<br />
+}
+      </code>
+    </section>
+
+    <!-- Workflow -->
+    <section class="box" id="workflow">
+      <h2>Terraform Workflow</h2>
+      <p>Follow these main steps to manage infrastructure:</p>
+      
+      <div class="workflow">
+        <a href="init.html">⚙️ Init</a>
+        <a href="plan.html">📝 Plan</a>
+        <a href="apply.html">🚀 Apply</a>
+        <a href="destroy.html">🗑️ Destroy</a>
+      </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="box" id="benefits">
+      <h2>Key Benefits</h2>
+      <ul>
+        <li>✅ <b>Efficiency:</b> Automates resource provisioning & reduces manual work</li>
+        <li>🔒 <b>Consistency:</b> Avoids human errors & ensures predictable deployments</li>
+        <li>♻️ <b>Immutable Infra:</b> Prevents configuration drift & improves stability</li>
+        <li>🤝 <b>Collaboration:</b> Works with Git for teamwork, reviews, and rollbacks</li>
+      </ul>
+    </section>
+
+    <!-- Core Concepts -->
+    <section class="box" id="core">
+      <h2>Core Concepts</h2>
+      <ul>
+        <li>📦 <b>Resource:</b> Infrastructure object managed by Terraform</li>
+        <li>☁️ <b>Provider:</b> Services like aws_s3_bucket, google_compute_instance</li>
+        <li>📚 <b>Module:</b> Reusable building block of configurations</li>
+        <li>🔗 <b>Data Sources:</b> Manage complex dependencies dynamically</li>
+      </ul>
+    </section>
+
+    <!-- Example Use Cases -->
+    <section class="box" id="use-cases">
+      <h2>Example Use Cases</h2>
+      <ul>
+        <li>☁️ <b>Cloud Resource Provisioning:</b> Launch VMs, DBs, networks in minutes</li>
+        <li>🌐 <b>Multi-Cloud Deployments:</b> Manage AWS, Azure, and GCP together</li>
+        <li>🐳 <b>Container Orchestration:</b> Deploy & scale Kubernetes clusters</li>
+        
+        <li>🧪 <b>Dev/Test Environments:</b> Quickly spin up isolated test setups</li>
+        
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Learn More: <a href="https://hashicorp.com" target="_blank" rel="noopener noreferrer">hashicorp.com</a></p>
+  </footer>
+
+</body>
+</html>

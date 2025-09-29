@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terraform Apply</title>
+  <style>
+   /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #f9fbfc, #eef7f1);
+  color: #333;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+header {
+  background: linear-gradient(90deg, #1b5e20, #2e7d32);
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .header-logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+header p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #d9f2dc;
+  margin-top: 4px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 30px auto 60px;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.box {
+  background-color: white;
+  padding: 28px 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+}
+
+.box h2 {
+  font-size: 28px;
+  color: #1b5e20;
+  margin-bottom: 16px;
+  font-weight: 700;
+  border-bottom: 2px solid #e1e7ef;
+  padding-bottom: 6px;
+}
+
+.box p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.box code {
+  display: block;
+  background: #e8f5e9;
+  padding: 12px 14px;
+  margin: 15px 0;
+  border-left: 5px solid #1b5e20;
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: #2e7d32;
+  border-radius: 5px;
+  white-space: pre-wrap;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+nav {
+  margin-top: 20px;
+  text-align: center;
+}
+
+nav a {
+  background: #1b5e20;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(27, 94, 32, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #145a1e;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(27, 94, 32, 0.9);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #1b5e20, #2e7d32);
+  color: white;
+  text-align: center;
+  padding: 22px 15px;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fdd835;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <img src="Terra.png" alt="Terraform Logo" class="header-logo" />
+      <div>
+        <h1>Terraform: Apply</h1>
+        <p>Provision & Modify Infrastructure</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="box">
+      <h2>What is <code>terraform apply</code>?</h2>
+      <p>
+        The <code>terraform apply</code> command executes the actions proposed in the plan.
+        It provisions, updates, or deletes resources to match your desired configuration.
+      </p>
+    </section>
+
+    <section class="box">
+      <h2>Usage</h2>
+      <p>After reviewing the plan, run <code>terraform apply</code> to implement the changes. You can also apply a saved plan file.</p>
+      <ul>
+        <li>🚀 Create new infrastructure resources</li>
+        <li>🔄 Update existing infrastructure</li>
+        <li>🗑️ Destroy resources marked for removal</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>Command</h2>
+      <code>terraform apply</code>
+    </section>
+
+    <nav>
+      <a href="index.html">&larr; Back to Workflow</a>
+    </nav>
+  </main>
+
+  <footer>
+    <p>Learn More: <a href="https://developer.hashicorp.com/terraform/cli/apply" target="_blank">Terraform Docs</a></p>
+  </footer>
+
+</body>
+</html>

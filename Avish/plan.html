@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terraform Plan</title>
+  <style>
+   /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #f9fbfc, #eef3f7);
+  color: #333;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+header {
+  background: linear-gradient(90deg, #0a3b66, #145c9e);
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .header-logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+header p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #dbe6f1;
+  margin-top: 4px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 30px auto 60px;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.box {
+  background-color: white;
+  padding: 28px 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+}
+
+.box h2 {
+  font-size: 28px;
+  color: #0a3b66;
+  margin-bottom: 16px;
+  font-weight: 700;
+  border-bottom: 2px solid #e1e7ef;
+  padding-bottom: 6px;
+}
+
+.box p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.box code {
+  display: block;
+  background: #f9fafc;
+  padding: 12px 14px;
+  margin: 15px 0;
+  border-left: 5px solid #0a3b66;
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: #333;
+  border-radius: 5px;
+  white-space: pre-wrap;
+}
+
+nav {
+  margin-top: 20px;
+  text-align: center;
+}
+
+nav a {
+  background: #0a3b66;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(10, 59, 102, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #07406a;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(10, 59, 102, 0.9);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #0a3b66, #145c9e);
+  color: white;
+  text-align: center;
+  padding: 22px 15px;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffd633;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <img src="Terra.png" alt="Terraform Logo" class="header-logo" />
+      <div>
+        <h1>Terraform: Plan</h1>
+        <p>Preview Infrastructure Changes</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="box">
+      <h2>What is <code>terraform plan</code>?</h2>
+      <p>
+        The <code>terraform plan</code> command creates an execution plan, showing you what actions Terraform will take
+        to reach the desired state described in your configuration.
+        It lets you preview changes before applying them.
+      </p>
+    </section>
+
+    <section class="box">
+      <h2>Why Use It?</h2>
+      <p>
+        Always run <code>terraform plan</code> before <code>terraform apply</code> to:
+      </p>
+      <ul>
+        <li>✅ Review planned changes before execution</li>
+        <li>⚡ Catch misconfigurations early</li>
+        <li>🛡️ Prevent unwanted infrastructure modifications</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>Command</h2>
+      <code>terraform plan</code>
+    </section>
+
+    <nav>
+      <a href="index.html">&larr; Back to Workflow</a>
+    </nav>
+  </main>
+
+  <footer>
+    <p>Learn More: <a href="https://developer.hashicorp.com/terraform/cli/plan" target="_blank">Terraform Docs</a></p>
+  </footer>
+
+</body>
+</html>
